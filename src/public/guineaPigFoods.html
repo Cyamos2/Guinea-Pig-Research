@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guinea Pig Foods</title>
+  <script src="guineaPigFoods.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+    }
+
+    .citation {
+      font-style: italic;
+      color: #888;
+    }
+
+    .back-button {
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="back-button" onclick="window.location.href='/index'">Back to Index</button>
+  <h1>Guinea Pig Foods</h1>
+
+  <p>Guinea pigs require a balanced diet to stay healthy. Here are some foods they can and cannot eat:</p>
+
+  <h2>Foods Guinea Pigs Can Eat</h2>
+  <ul id="canEatList">
+    <!-- Foods guinea pigs can eat will be dynamically added here using JavaScript -->
+  </ul>
+
+  <h2>Foods Guinea Pigs Cannot Eat</h2>
+  <ul id="cannotEatList">
+    <!-- Foods guinea pigs cannot eat will be dynamically added here using JavaScript -->
+  </ul>
+
+  <p class="citation">Source: RSPCA - <a href="https://www.rspca.org.uk/adviceandwelfare/pets/rodents/guineapigs/diet" target="_blank">Guinea Pig Diet</a></p>
+</body>
+</html>
