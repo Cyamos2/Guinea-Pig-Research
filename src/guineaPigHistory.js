@@ -1,5 +1,7 @@
+// guineaPigHistory.js
 console.log("Guinea Pig History JavaScript loaded!");
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Your existing code for guineaPigHistory.js
+  // Add specific functionality for guineaPigHistory.html
+  // For example, show/hide content, handle user interactions, etc.
 });
