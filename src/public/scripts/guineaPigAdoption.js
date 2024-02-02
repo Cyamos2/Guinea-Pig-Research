@@ -1,25 +1,43 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Function to toggle visibility of pros and cons
-    function toggleVisibility(sectionId) {
-      const section = document.getElementById(sectionId);
-      section.classList.toggle('hidden');
-    }
-  
-    // Event listeners for each section
-    document.getElementById('petStores').addEventListener('click', function () {
-      toggleVisibility('petStoresContent');
-    });
-  
-    document.getElementById('shelters').addEventListener('click', function () {
-      toggleVisibility('sheltersContent');
-    });
-  
-    document.getElementById('breeders').addEventListener('click', function () {
-      toggleVisibility('breedersContent');
-    });
-  
-    document.getElementById('rescueGroups').addEventListener('click', function () {
-      toggleVisibility('rescueGroupsContent');
-    });
-  });
+// guineaPigAdoption.js
+console.log("Guinea Pig Adoption JavaScript loaded!");
+
+// Sample data for guinea pig adoption
+const guineaPigAdoptionData = {
+  petStores: {
+    title: "Pet Stores",
+    content: "Pet stores offer a variety of guinea pig breeds. Ensure that the store practices ethical breeding and cares for the animals properly."
+  },
+  shelters: {
+    title: "Shelters",
+    content: "Adopting from shelters is a great way to give a home to a guinea pig in need. Shelters often have guinea pigs of different ages and breeds."
+  },
+  breeders: {
+    title: "Breeders",
+    content: "Reputable breeders can provide specific guinea pig breeds. Ensure the breeder follows ethical breeding practices and prioritizes the health of the animals."
+  }
+};
+
+// Display guinea pig adoption information
+function displayGuineaPigAdoptionInfo() {
+  const adoptionContainer = document.getElementById("guineaPigAdoption");
+
+  for (const category in guineaPigAdoptionData) {
+    const section = document.createElement("div");
+    section.classList.add("adoption-section");
+
+    const title = document.createElement("h3");
+    title.textContent = guineaPigAdoptionData[category].title;
+
+    const content = document.createElement("p");
+    content.textContent = guineaPigAdoptionData[category].content;
+
+    section.appendChild(title);
+    section.appendChild(content);
+    adoptionContainer.appendChild(section);
+  }
+}
+
+// Call the function to display guinea pig adoption information
+displayGuineaPigAdoptionInfo();
+
   

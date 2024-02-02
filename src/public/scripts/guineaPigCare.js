@@ -43,3 +43,4 @@ function displayGuineaPigCareInfo() {
 
 // Call the function to display guinea pig care information
 displayGuineaPigCareInfo();
+
