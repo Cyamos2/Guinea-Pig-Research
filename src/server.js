@@ -1,10 +1,13 @@
 const express = require('express');
-const app = express();
 const path = require('path');
+const app = express();
+const port = 3000;
 
+// Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes
+// Define routes for each page
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
@@ -29,10 +32,9 @@ app.get('/life-daily', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'life-daily.html'));
 });
 
-// Add other routes as needed
+// Add more routes if needed
 
 // Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
