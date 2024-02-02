@@ -1,0 +1,23 @@
+{
+  "name": "guinea-pig-research",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyamos2/Guinea-Pig-Research.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cyamos2/Guinea-Pig-Research/issues"
+  },
+  "homepage": "https://github.com/Cyamos2/Guinea-Pig-Research#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
