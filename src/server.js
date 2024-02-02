@@ -2,37 +2,35 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// Serve static files from the 'public' directory
+// Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routes
 app.get('/', (req, res) => {
-  res.redirect('/guineaPigLifeDaily');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get('/guineaPigHistory', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'guineaPigHistory.html'));
-});
-
-app.get('/guineaPigCare', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'guineaPigCare.html'));
-});
-
-app.get('/guineaPigFoods', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'guineaPigFoods.html'));
-});
-
-app.get('/guineaPigAdoption', (req, res) => {
+app.get('/adoption', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'guineaPigAdoption.html'));
 });
 
-app.get('/guineaPigLifeDaily', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'guineaPigLifeDaily.html'));
+app.get('/care', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'guineaPigCare.html'));
 });
 
-// Additional routes for other pages...
+app.get('/foods', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'guineaPigFoods.html'));
+});
+
+app.get('/history', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'guineaPigHistory.html'));
+});
+
+app.get('/life-daily', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'guineaPigLifeDaily.html'));
+});
 
 // Start the server
 app.listen(PORT, () => {

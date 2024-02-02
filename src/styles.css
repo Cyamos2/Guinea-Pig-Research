@@ -1,0 +1,66 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Page-Specific Styles */
+/* Guinea Pig Adoption */
+#adoptionContent {
+  margin-top: 20px;
+}
+
+/* Guinea Pig Care */
+#careContent {
+  margin-top: 20px;
+}
+
+/* Guinea Pig Foods */
+#foodsContent {
+  margin-top: 20px;
+}
+
+/* Guinea Pig History */
+#historyContent {
+  margin-top: 20px;
+}
+
+/* Guinea Pig Life Daily */
+#lifeDailyContent {
+  margin-top: 20px;
+}
+
+/* Additional Styling for Buttons or Specific Elements */
+.button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Customize other elements based on your design */
