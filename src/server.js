@@ -1,29 +1,19 @@
-// server.js
+// guineaPigAdoption.js
+console.log("Guinea Pig Adoption JavaScript loaded!");
 
-const express = require('express');
-const app = express();
-const port = 3000;
+document.addEventListener("DOMContentLoaded", () => {
+  const petStoresSection = document.getElementById("petStores");
+  const sheltersSection = document.getElementById("shelters");
 
-// Serve static files from the 'public' directory
-app.use(express.static('public'));
+  // Toggle visibility for Pet Stores content
+  petStoresSection.addEventListener("click", () => {
+    const petStoresContent = document.getElementById("petStoresContent");
+    petStoresContent.classList.toggle("hidden");
+  });
 
-// Set up routes
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
-});
-
-app.get('/history', (req, res) => {
-  res.sendFile(__dirname + '/public/history.html');
-});
-
-// Add the route for Guinea Pig Life Daily
-app.get('/guineaPigLifeDaily', (req, res) => {
-  res.sendFile(__dirname + '/public/guineaPigLifeDaily.html');
-});
-
-// Add more routes as needed
-
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+  // Toggle visibility for Shelters content
+  sheltersSection.addEventListener("click", () => {
+    const sheltersContent = document.getElementById("sheltersContent");
+    sheltersContent.classList.toggle("hidden");
+  });
 });
