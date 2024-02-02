@@ -1,24 +1,69 @@
-/* styles.css */
+/* Reset some default styles */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #4caf50;
+}
+
+section {
+  margin: 20px 0;
+}
+
+/* Buttons */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Content */
+.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  header {
+      font-size: 1.5em;
   }
-  
+
   h1, h2 {
-    color: #333;
+      font-size: 1.2em;
   }
-  
-  #guineaPigCare, #guineaPigHistory {
-    margin-bottom: 30px;
-    border: 1px solid #ccc;
-    padding: 10px;
+
+  button {
+      padding: 8px;
   }
-  
-  #guineaPigCare {
-    background-color: #ffe6cc;
-  }
-  
-  #guineaPigHistory {
-    background-color: #cce5ff;
-  }
-  
+}
