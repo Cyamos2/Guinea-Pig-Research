@@ -1,4 +1,3 @@
-// guineaPigCare.js
 console.log("Guinea Pig Care JavaScript loaded!");
 
 document.addEventListener("DOMContentLoaded", () => {

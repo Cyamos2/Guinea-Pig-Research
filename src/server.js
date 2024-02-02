@@ -1,19 +1,40 @@
-// guineaPigAdoption.js
-console.log("Guinea Pig Adoption JavaScript loaded!");
+// server.js
 
-document.addEventListener("DOMContentLoaded", () => {
-  const petStoresSection = document.getElementById("petStores");
-  const sheltersSection = document.getElementById("shelters");
+const express = require('express');
+const path = require('path');
 
-  // Toggle visibility for Pet Stores content
-  petStoresSection.addEventListener("click", () => {
-    const petStoresContent = document.getElementById("petStoresContent");
-    petStoresContent.classList.toggle("hidden");
-  });
+const app = express();
+const port = 3000;
 
-  // Toggle visibility for Shelters content
-  sheltersSection.addEventListener("click", () => {
-    const sheltersContent = document.getElementById("sheltersContent");
-    sheltersContent.classList.toggle("hidden");
-  });
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Set up routes
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.get('/history', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'history.html'));
+});
+
+app.get('/care', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'guineaPigCare.html'));
+});
+
+app.get('/foods', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'guineaPigFoods.html'));
+});
+
+app.get('/adoption', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'guineaPigAdoption.html'));
+});
+
+app.get('/life-daily', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'guineaPigLifeDaily.html'));
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
 });
