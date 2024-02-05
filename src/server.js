@@ -1,3 +1,4 @@
+// server.js
 const express = require('express');
 const path = require('path');
 
@@ -12,6 +13,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+// Routes for other pages
 app.get('/adoption', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'guineaPigAdoption.html'));
 });
@@ -34,5 +36,5 @@ app.get('/life-daily', (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });

@@ -25,29 +25,45 @@ footer {
 }
 
 /* Page-Specific Styles */
+
 /* Guinea Pig Adoption */
 #adoptionContent {
-  margin-top: 20px;
+  background-color: #ffeaa7;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 5px;
 }
 
 /* Guinea Pig Care */
 #careContent {
-  margin-top: 20px;
+  background-color: #fab1a0;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 5px;
 }
 
 /* Guinea Pig Foods */
 #foodsContent {
-  margin-top: 20px;
+  background-color: #74b9ff;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 5px;
 }
 
 /* Guinea Pig History */
 #historyContent {
-  margin-top: 20px;
+  background-color: #a29bfe;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 5px;
 }
 
 /* Guinea Pig Life Daily */
 #lifeDailyContent {
-  margin-top: 20px;
+  background-color: #00cec9;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 5px;
 }
 
 /* Additional Styling for Buttons or Specific Elements */
